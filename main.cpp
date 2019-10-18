@@ -6,7 +6,7 @@
 #include <string>
 #include <iostream>
 
-void std::swap(Student*,Student*);
+void swap(Student*,Student*);
 
 int main(){
 
@@ -55,9 +55,9 @@ int main(){
         addresses[i].setZip(zip);
         students[i].setStudentZip(addresses[i]);
         dates[i].setDate(birthday);
-        students[i].getStudentDateBirth(date[i]);
+        students[i].setStudentDateBirth(dates[i]);
         dates[i].setDate(gradDay);
-        students[i].getStudentDateGrad(date[i]);
+        students[i].setStudentDateGrad(dates[i]);
         students[i].setGPA(GPA);
         students[i].setCredits(credits);
 
@@ -71,6 +71,7 @@ int main(){
         std::cout << "1: Full Report" << std::endl;
         std::cout << "2: Short Report" << std::endl;
         std::cout << "3: Sorted Report" << std::endl;
+        std::cout << "4: End" << std::endl;
 
         std::cin >> answer;
         if(answer==1){
@@ -79,7 +80,7 @@ int main(){
             }
         }//end full report
 
-        else if(reply==2){
+        else if(answer==2){
             for(a<0;a<50;a++){
                 shortReport << "Student " << a+1 << std::endl;
                 students[a].printShortReport(shortReport);
@@ -110,7 +111,7 @@ int main(){
     delete[]addresses;
     delete[]students;
 
-return 0
+return 0;
 }//end main
 
 void swap(Student*students1,Student*students2){

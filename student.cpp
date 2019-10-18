@@ -100,25 +100,25 @@ void Student::setStudentDateGrad(Date dateGrad){
     Student::dateGrad = dateGrad;
 }
 
-void Student::printFullReport(ofstream& fullReport){
+void Student::printFullReport(std::ofstream& fullReport){
     fullReport << "Name: " << getFirstName() << " " << getLastName() << std::endl;
-    fullReport << "Address: " << getStudentAddress() << 
-    \n"Address 2: " << getStudentAddress2() << 
-    \n"City: " << getStudentCity() <<
-    \n"State: " << getStudentState() << 
-    \n"Zip: " << getStudentZip() << 
-    \n"Date of Birth: " getStudentDateBirth() <<
-    \n"Credits: " << getStudentCredits() << 
-    \n"GPA: " << getStudentGPA() << 
-    \n"Date of Graduation: " << getStudentDateGrad() <<
-    \n"_________________________________________________________" << std::endl;
+    fullReport << "Address: " << getStudentAddress().getAddress1() << 
+    "\nAddress 2: " << getStudentAddress2().getAddress2() << 
+    "\nCity: " << getStudentCity().getCity() <<
+    "\nState: " << getStudentState().getState() << 
+    "\nZip: " << getStudentZip().getZip() << 
+    "\nDate of Birth: " << getStudentDateBirth().getDate() <<
+    "\nCredits: " << getCredits() << 
+    "\nGPA: " << getGPA() << 
+    "\nDate of Graduation: " << getStudentDateGrad().getDate() <<
+    "\n_________________________________________________________" << std::endl;
 }
 
-void Student::printShortReport(ofstream& shortReport){
+void Student::printShortReport(std::ofstream& shortReport){
     shortReport << "First Name: " << getFirstName() << 
-    \n"Last Name: " << getLastName() << std::endl;
+    "\nLast Name: " << getLastName() << std::endl;
 }
 
-void Student::printSortedReport(ofstream& sortedReport){
-    sortedReport << "Last Name: " << getLastName() << "First Name: " << getFirstName() << endl;
+void Student::printSortedReport(std::ofstream& sortedReport){
+    sortedReport << "Last Name: " << getLastName() << ", " << getFirstName() << std::endl;
 }

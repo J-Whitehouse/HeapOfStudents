@@ -10,15 +10,15 @@ class Student{
     protected:
         std::string firstName;
         std::string lastName;
-        std::string GPA;
+        std::string gpa;
         std::string credits;
         Address address1;
         Address address2;
         Address city;
         Address state;
-        Address zipcode;
-        Dates dateBirth;
-        Dates gradDate;
+        Address zip;
+        Date dateBirth;
+        Date dateGrad;
 
     public:
         Student();
@@ -58,8 +58,8 @@ class Student{
         void setStudentDateGrad(Date dateGrad);
         Date getStudentDateGrad();
 
-        void printFullReport(ofstream&);
-        void printShortReport(ofstream&);
-        void printSortedReport(ofstream&);
+        void printFullReport(std::ofstream&);
+        void printShortReport(std::ofstream&);
+        void printSortedReport(std::ofstream&);
 }; //end Student class
 #endif

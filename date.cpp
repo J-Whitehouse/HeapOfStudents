@@ -1,5 +1,13 @@
 #include "date.h"
 
+Date::Date(){
+
+}
+
+Date::~Date(){
+
+}
+
 int Date::getDay(){
     return day;
 }
@@ -24,7 +32,7 @@ void Date::setYear(int year){
     Date::year = year;
 }
 
-int Date::getDate(){
+std::string Date::getDate(){
     return date;
 }
 
