@@ -30,5 +30,5 @@ class Address{
 
             std::string getZip();
             void setZip(std::string zip);
-}//end Address class
+};//end Address class
 #endif

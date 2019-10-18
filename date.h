@@ -25,5 +25,5 @@ class Date{
 
         std::string getDate();
         void setDate(std::string date);
-}//end Date class
+};//end Date class
 #endif

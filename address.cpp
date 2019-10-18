@@ -3,11 +3,9 @@
 #include <iostream>
 
 Address::Address(){
-
 }
 
 Address::~Address(){
-
 }
 
 std::string Address::getAddress1(){
